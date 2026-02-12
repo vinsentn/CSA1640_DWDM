@@ -1,0 +1,17 @@
+
+lower <- c(1, 5, 15, 20, 50, 80)
+upper <- c(5, 15, 20, 50, 80, 110)
+f <- c(200, 450, 300, 1500, 700, 44)
+
+
+cf <- cumsum(f)
+N2 <- sum(f) / 2
+i <- which(cf >= N2)[1]
+
+median <- lower[i] + ((N2 - ifelse(i==1,0,cf[i-1])) / f[i]) * (upper[i] - lower[i])
+
+
+median
+
+OUTPUT 
+[1] 32.94
