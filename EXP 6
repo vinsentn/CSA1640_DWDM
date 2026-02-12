@@ -1,0 +1,30 @@
+A <- c(18,2,20)
+B <- c(22,28,10)
+C <- c(20,40,40)
+
+# Covariance between B and C
+cov(B,C)
+
+# Covariance matrix
+prefs <- data.frame(A,B,C)
+cov(prefs)
+
+# Correlation between B and C
+cor(B,C)
+
+# Correlation matrix
+cor(prefs)
+
+OUTPUT 
+[1] -20
+          A   B         C
+A  97.33333 -74 -46.66667
+B -74.00000  84 -20.00000
+C -46.66667 -20 133.33333
+[1] -0.1889822
+           A          B          C
+A  1.0000000 -0.8183918 -0.4096440
+B -0.8183918  1.0000000 -0.1889822
+C -0.4096440 -0.1889822  1.0000000
+
+=== Code Execution Successful ===
